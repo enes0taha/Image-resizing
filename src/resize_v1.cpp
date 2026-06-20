@@ -59,8 +59,8 @@ Image resize_bilinear(const Image& src, int new_w, int new_h) {
             if (y1 >= src.height) y1 = src.height - 1;
 
             // Enterpolasyon ağırlıkları
-            double wx = fx - std::floor(fx); // LINUX UYUMLULUĞU: std:: eklendi
-            double wy = fy - std::floor(fy); // LINUX UYUMLULUĞU: std:: eklendi
+            double wx = fx - std::floor(fx); 
+            double wy = fy - std::floor(fy); 
 
             for (int ch = 0; ch < src.channels; ch++) {
                 double p00 = pixel_c(src, y0, x0, ch);
